@@ -7,3 +7,4 @@ C:\Users\girard.e\Desktop\dnd\DnDVisualizer\DnDVisualizer\obj\Debug\DnDVisualize
 C:\Users\girard.e\Desktop\dnd\DnDVisualizer\DnDVisualizer\obj\Debug\DnDVisualizer.csproj.CoreCompileInputs.cache
 C:\Users\girard.e\Desktop\dnd\DnDVisualizer\DnDVisualizer\obj\Debug\DnDVisualizer.exe
 C:\Users\girard.e\Desktop\dnd\DnDVisualizer\DnDVisualizer\obj\Debug\DnDVisualizer.pdb
+C:\Users\girard.e\Desktop\dnd\DnDVisualizer\DnDVisualizer\obj\Debug\DnDVisualizer.Form1.resources
