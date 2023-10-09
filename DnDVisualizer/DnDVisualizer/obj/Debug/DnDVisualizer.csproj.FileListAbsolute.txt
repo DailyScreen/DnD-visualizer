@@ -1,0 +1,9 @@
+C:\Users\girard.e\Desktop\dnd\DnDVisualizer\DnDVisualizer\bin\Debug\DnDVisualizer.exe.config
+C:\Users\girard.e\Desktop\dnd\DnDVisualizer\DnDVisualizer\bin\Debug\DnDVisualizer.exe
+C:\Users\girard.e\Desktop\dnd\DnDVisualizer\DnDVisualizer\bin\Debug\DnDVisualizer.pdb
+C:\Users\girard.e\Desktop\dnd\DnDVisualizer\DnDVisualizer\obj\Debug\DnDVisualizer.csproj.AssemblyReference.cache
+C:\Users\girard.e\Desktop\dnd\DnDVisualizer\DnDVisualizer\obj\Debug\DnDVisualizer.Properties.Resources.resources
+C:\Users\girard.e\Desktop\dnd\DnDVisualizer\DnDVisualizer\obj\Debug\DnDVisualizer.csproj.GenerateResource.cache
+C:\Users\girard.e\Desktop\dnd\DnDVisualizer\DnDVisualizer\obj\Debug\DnDVisualizer.csproj.CoreCompileInputs.cache
+C:\Users\girard.e\Desktop\dnd\DnDVisualizer\DnDVisualizer\obj\Debug\DnDVisualizer.exe
+C:\Users\girard.e\Desktop\dnd\DnDVisualizer\DnDVisualizer\obj\Debug\DnDVisualizer.pdb
