@@ -4,7 +4,7 @@ using System;
 namespace UnitTestProjectDND
 {
     [TestClass]
-    public class UnitTest1
+    public class UnitTestFichierPersonnage
     {
         [TestMethod]
         public void TestMethod1()
