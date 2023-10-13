@@ -1,9 +1,9 @@
 ﻿using System;
+using System.Collections.Generic;
 
-
-namespace DnDVisualizer.classes
+namespace DnDVisualizer
 {
-    class FichierPersonnage
+    public class FichierPersonnage
     {
         #region attribut
         private String _race;
@@ -21,7 +21,7 @@ namespace DnDVisualizer.classes
         private String _competence;
         private String _outilsProf;
         private String _langue;
-        private int[] _piece; // pp,gp,ep,sp,bp
+        private List<int> _piece; // pp,gp,ep,sp,bp
 
         private String _armure;
         private String _bouclier;
@@ -37,47 +37,47 @@ namespace DnDVisualizer.classes
         private int _poids;
         private String _alignement;
         private int _experience;
-        private String[] _traits;
-        private String[] _ideaux;
-        private String[] _lien;
-        private String[] _defauts;
-        private String[] _allies;
+        private List<String> _traits;
+        private List<String> _ideaux;
+        private List<String> _lien;
+        private List<String> _defauts;
+        private List<String> _allies;
         #endregion
 
         #region constructeur
         public FichierPersonnage(
-            string race, 
-            string classe, 
+            String race, 
+            String classe, 
             int niveau, 
-            string histoire,
+            String histoire,
             int force,
             int dexterite, 
             int constitution, 
             int intelligence, 
             int sagesse, 
             int charme,
-            string competence, 
-            string outilsProf, 
-            string langue, 
-            int[] piece,
-            string armure, 
-            string bouclier, 
-            string arme, 
-            string arme2, 
-            string outils,
-            string items, 
-            string nom, 
-            string sexe, 
+            String competence, 
+            String outilsProf, 
+            String langue, 
+            List<int> piece,
+            String armure, 
+            String bouclier, 
+            String arme, 
+            String arme2, 
+            String outils,
+            String items, 
+            String nom, 
+            String sexe, 
             int age, 
             int taille, 
             int poids,
-            string alignement, 
-            int experience, 
-            string[] traits, 
-            string[] ideaux, 
-            string[] lien,
-            string[] defauts, 
-            string[] allies
+            String alignement, 
+            int experience,
+            List<String> traits,
+            List<String> ideaux,
+            List<String> lien,
+            List<String> defauts,
+            List<String> allies
             )
         {
             _race = race;
@@ -120,13 +120,13 @@ namespace DnDVisualizer.classes
         #endregion
 
         #region propriete
-        public string Race
+        public String Race
         {
             get { return _race; }
             set { _race = value; }
         }
 
-        public string Classe
+        public String Classe
         {
             get { return _classe; }
             set { _classe = value; }
@@ -138,7 +138,7 @@ namespace DnDVisualizer.classes
             set { _niveau = value; }
         }
 
-        public string Histoire
+        public String Histoire
         {
             get { return _histoire; }
             set { _histoire = value; }
@@ -180,73 +180,73 @@ namespace DnDVisualizer.classes
             set { _charme = value; }
         }
 
-        public string Competence
+        public String Competence
         {
             get { return _competence; }
             set { _competence = value; }
         }
 
-        public string OutilsProf
+        public String OutilsProf
         {
             get { return _outilsProf; }
             set { _outilsProf = value; }
         }
 
-        public string Langue
+        public String Langue
         {
             get { return _langue; }
             set { _langue = value; }
         }
 
-        public int[] Piece
+        public List<int> Piece
         {
             get { return _piece; }
             set { _piece = value; }
         }
 
-        public string Armure
+        public String Armure
         {
             get { return _armure; }
             set { _armure = value; }
         }
 
-        public string Bouclier
+        public String Bouclier
         {
             get { return _bouclier; }
             set { _bouclier = value; }
         }
 
-        public string Arme
+        public String Arme
         {
             get { return _arme; }
             set { _arme = value; }
         }
 
-        public string Arme2
+        public String Arme2
         {
             get { return _arme2; }
             set { _arme2 = value; }
         }
 
-        public string Outils
+        public String Outils
         {
             get { return _outils; }
             set { _outils = value; }
         }
 
-        public string Items
+        public String Items
         {
             get { return _items; }
             set { _items = value; }
         }
 
-        public string Nom
+        public String Nom
         {
             get { return _nom; }
             set { _nom = value; }
         }
 
-        public string Sexe
+        public String Sexe
         {
             get { return _sexe; }
             set { _sexe = value; }
@@ -270,7 +270,7 @@ namespace DnDVisualizer.classes
             set { _poids = value; }
         }
 
-        public string Alignement
+        public String Alignement
         {
             get { return _alignement; }
             set { _alignement = value; }
@@ -282,31 +282,31 @@ namespace DnDVisualizer.classes
             set { _experience = value; }
         }
 
-        public string[] Traits
+        public List<String> Traits
         {
             get { return _traits; }
             set { _traits = value; }
         }
 
-        public string[] Ideaux
+        public List<String> Ideaux
         {
             get { return _ideaux; }
             set { _ideaux = value; }
         }
 
-        public string[] Lien
+        public List<String> Lien
         {
             get { return _lien; }
             set { _lien = value; }
         }
 
-        public string[] Defauts
+        public List<String> Defauts
         {
             get { return _defauts; }
             set { _defauts = value; }
         }
 
-        public string[] Allies
+        public List<String> Allies
         {
             get { return _allies; }
             set { _allies = value; }
@@ -315,8 +315,26 @@ namespace DnDVisualizer.classes
 
         #region methode
 
-        public static void sycroArgent()
+        public void sycroArgent()
         {
+            if (this._piece[4] >= 100)
+            {
+                int a;
+                a=this._piece[4] - 100;
+                a = this._piece[3] + 1;
+            }
+            if (this._piece[1] >= 100)
+            {
+                int a;
+                a = this._piece[1] - 100;
+                a = this._piece[0] + 1;
+            }
+            if (this._piece[3] >= 100)
+            {
+                int a;
+                a = this._piece[3] - 100;
+                a = this._piece[1] + 1;
+            }
 
         }
         #endregion

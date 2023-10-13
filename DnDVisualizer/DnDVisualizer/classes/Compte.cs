@@ -1,8 +1,8 @@
 ﻿using System;
 
-namespace DnDVisualizer.classes
+namespace DnDVisualizer
 {
-    class Compte
+    public class Compte
     {
     }
 }
