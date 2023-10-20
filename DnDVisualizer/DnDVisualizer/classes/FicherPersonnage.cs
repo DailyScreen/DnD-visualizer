@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Text;
 using System.Collections.Generic;
 
 namespace DnDVisualizer
@@ -33,8 +34,8 @@ namespace DnDVisualizer
         private String _nom;
         private String _sexe;
         private int _age;
-        private int _taille; // en cm
-        private int _poids;
+        private String _taille;
+        private String _poids;
         private String _alignement;
         private int _experience;
         private List<String> _traits;
@@ -68,9 +69,9 @@ namespace DnDVisualizer
             String items, 
             String nom, 
             String sexe, 
-            int age, 
-            int taille, 
-            int poids,
+            int age,
+            String taille,
+            String poids,
             String alignement, 
             int experience,
             List<String> traits,
@@ -258,13 +259,13 @@ namespace DnDVisualizer
             set { _age = value; }
         }
 
-        public int Taille
+        public String Taille
         {
             get { return _taille; }
             set { _taille = value; }
         }
 
-        public int Poids
+        public String Poids
         {
             get { return _poids; }
             set { _poids = value; }
@@ -317,25 +318,60 @@ namespace DnDVisualizer
 
         public void sycroArgent()
         {
-            if (this._piece[4] >= 100)
+            while (this._piece[4] >= 100)
+            {
+                this._piece[4] = this._piece[4] - 100;
+                this._piece[3] = this._piece[3] + 1;
+            }
+            while (this._piece[3] >= 100)
             {
                 int a;
-                a=this._piece[4] - 100;
-                a = this._piece[3] + 1;
+                this._piece[3] = this._piece[3] - 100;
+                this._piece[1] = this._piece[1] + 1;
             }
-            if (this._piece[1] >= 100)
+            while (this._piece[1] >= 100)
             {
-                int a;
-                a = this._piece[1] - 100;
-                a = this._piece[0] + 1;
+                this._piece[1] = this._piece[1] - 100;
+                this._piece[0] = this._piece[0] + 1;
             }
-            if (this._piece[3] >= 100)
-            {
-                int a;
-                a = this._piece[3] - 100;
-                a = this._piece[1] + 1;
-            }
+        }
+        public override string ToString()
+        {
+            StringBuilder sb = new StringBuilder();
+            sb.AppendLine($"Race: {Race}");
+            sb.AppendLine($"Classe: {Classe}");
+            sb.AppendLine($"Niveau: {Niveau}");
+            sb.AppendLine($"Histoire: {Histoire}");
+            sb.AppendLine($"Force: {Force}");
+            sb.AppendLine($"Dextérité: {Dexterite}");
+            sb.AppendLine($"Constitution: {Constitution}");
+            sb.AppendLine($"Intelligence: {Intelligence}");
+            sb.AppendLine($"Sagesse: {Sagesse}");
+            sb.AppendLine($"Charme: {Charme}");
+            sb.AppendLine($"Compétence: {Competence}");
+            sb.AppendLine($"Outils de Prof: {OutilsProf}");
+            sb.AppendLine($"Langue: {Langue}");
+            sb.AppendLine($"Pièces: {string.Join(", ", Piece)}");
+            sb.AppendLine($"Armure: {Armure}");
+            sb.AppendLine($"Bouclier: {Bouclier}");
+            sb.AppendLine($"Arme: {Arme}");
+            sb.AppendLine($"Deuxième Arme: {Arme2}");
+            sb.AppendLine($"Outils: {Outils}");
+            sb.AppendLine($"Items: {Items}");
+            sb.AppendLine($"Nom: {Nom}");
+            sb.AppendLine($"Sexe: {Sexe}");
+            sb.AppendLine($"Âge: {Age}");
+            sb.AppendLine($"Taille: {Taille} cm");
+            sb.AppendLine($"Poids: {Poids}");
+            sb.AppendLine($"Alignement: {Alignement}");
+            sb.AppendLine($"Expérience: {Experience}");
+            sb.AppendLine($"Traits: {string.Join(", ", Traits)}");
+            sb.AppendLine($"Idéaux: {string.Join(", ", Ideaux)}");
+            sb.AppendLine($"Lien: {string.Join(", ", Lien)}");
+            sb.AppendLine($"Défauts: {string.Join(", ", Defauts)}");
+            sb.AppendLine($"Alliés: {string.Join(", ", Allies)}");
 
+            return sb.ToString();
         }
         #endregion
     }

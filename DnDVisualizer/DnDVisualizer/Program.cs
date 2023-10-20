@@ -11,9 +11,14 @@ namespace DnDVisualizer
         [STAThread]
         static void Main()
         {
-            Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            PasserelleXML laPasserelle = new PasserelleXML();
+            FichierPersonnage perso1 = laPasserelle.getInfoPerso("NomPersonnage.xml");
+            Console.WriteLine(perso1.ToString());
+            //Console.WriteLine(perso1.Allies[1]);
+
+            //Application.EnableVisualStyles();
+            //Application.SetCompatibleTextRenderingDefault(false);
+            //Application.Run(new Form1());
         }
     }
 }

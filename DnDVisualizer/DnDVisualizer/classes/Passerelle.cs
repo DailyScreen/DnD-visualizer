@@ -5,7 +5,7 @@ using System.Xml;
 
 namespace DnDVisualizer
 {
-    public class Passerelle
+    public abstract class Passerelle
     {
         // méthode pour obtenir un flux en lecture à partir de l'adresse d'un fichier ou de l'URL d'un service web
         // paramètre adrFichierOuServiceWeb : le nom du fichier contenant la trace (String)
@@ -45,7 +45,7 @@ namespace DnDVisualizer
                 return null;
             }
         }
-
+        public abstract FichierPersonnage getInfoPerso(String url);
 
     }    
 }
